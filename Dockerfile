@@ -9,5 +9,8 @@ RUN apk upgrade --no-cache \
 # add the custom configurations
 COPY rootfs/ /
 
+# default opendkim port
+EXPOSE 8891/tcp
+
 CMD [ "/entrypoint.sh" ]
 
